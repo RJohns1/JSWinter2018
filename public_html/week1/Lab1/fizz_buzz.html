@@ -10,9 +10,19 @@
 </head>
 <body>
     <script type="text/javascript">
-        if(num === 2){
-            console.log('fizz')
-        }       
+        var num = []
+        for(i = 1; i <= 100; i++){
+            num[i] = [i]
+            if(num[i] % 2){
+                console.log('fizz')
+            }
+            if(num[i] % 3){
+                console.log('buzz')
+            }
+            if(num[i] % 2 && num[i] % 3){
+                console.log('fizz buzz')
+            }
+        }     
     </script>
 </body>
 </html>
