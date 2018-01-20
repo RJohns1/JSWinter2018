@@ -4,11 +4,6 @@
         <title>Lab2 | Creating Elements</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            .border{
-                border-style: dotted;
-            }
-        </style>
     </head>
     <body>
         <script>
@@ -22,7 +17,7 @@
                 tempDiv.appendChild(p);
                 document.body.appendChild(tempDiv);
                 
-                p.classList.add('border');
+                tempDiv.classList.add('border');
                 tempDiv.setAttribute("id", String(i));
             }
 
