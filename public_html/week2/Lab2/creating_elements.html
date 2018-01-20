@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab2 | Creating Elements</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .border{
+                border-style: dotted;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            for (var i = 0; i < 20; i++){
+                var tempDiv = document.createElement("adiv");
+                let p = document.createElement('p');
+
+                let textnode = document.createTextNode('Text');
+
+                p.appendChild(textnode);
+                tempDiv.appendChild(p);
+                document.body.appendChild(tempDiv);
+                
+                p.classList.add('border');
+                tempDiv.setAttribute("id", String(i));
+            }
+
+        </script>
+    </body>
+</html>
