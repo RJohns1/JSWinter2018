@@ -8,7 +8,17 @@
     <body>
 
         <script>
+            let body = document.querySelector('body')
+            let str="";
 
+            for (var i = 0; i < 20; i++){
+                str += "<div id='" + i + "' class='border'>";
+                str += "<p>";
+                str += "Text";
+                str += "</p>";
+                str +="</div>";
+            }
+            body.innerHTML = str;
         </script>
     </body>
 </html>
