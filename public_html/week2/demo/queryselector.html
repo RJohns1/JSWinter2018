@@ -11,28 +11,31 @@
                 width: 50px;
                 transition: width 20s;
             }
-            
             .big {
                 width: 1000px
-                
+            }
+            .anything{
+                color: yellow;
+                text-decoration: underline;
             }
             
-            
-            </style>
+        </style>
     </head>
     <body>
         <div class="error">TODO write content</div>
-        <div>TODO write content</div>
+        <div id="anything" class="error">TODO write content</div>
         <script>
+            var element = document.querySelector('.error')
+            let anything = document.querySelector('#anything')
+            // element.classList.add('error');
+            anything.classList.add('anything')
+            element.classList.add('big')
+            element.classList.remove('error')
             
-        var element = document.querySelector('.error');
-        
-        // element.classList.add('error');
-        element.classList.add('big');
-        
-        // element.style.backgroundColor = 'blue';
-        element.style.textAlign = 'center';
-            
+            // Todo: function to remove error class
+            // element.style.backgroundColor = 'blue';
+            element.style.textAlign = 'right'
+            element.style.color = 'blue';
         </script>
     </body>
 </html>
