@@ -12,14 +12,14 @@
     <script type="text/javascript">
         var num = []
         for(i = 1; i <= 100; i++){
-            num[i] = [i]
+            num[i] = i
             if(num[i] % 2){
                 console.log('fizz')
             }
-            if(num[i] % 3){
+            else if(num[i] % 3){
                 console.log('buzz')
             }
-            if(num[i] % 2 && num[i] % 3){
+            else if(num[i] % 2 && num[i] % 3){
                 console.log('fizz buzz')
             }
         }     
