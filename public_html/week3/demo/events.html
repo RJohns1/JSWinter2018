@@ -43,6 +43,14 @@
             function clickME() {
                 // Output to the console the paramter
                 div.classList.add('big');
+                //change background color on button without .class
+                this.style.backgroundColor = 'red';
+            }
+            
+            //removes big class
+            document.querySelector('.error').addEventListener('dblclick', removeBIG);
+            function removeBIG(){
+                div.classList.remove('big');
             }
         
             

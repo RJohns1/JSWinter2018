@@ -6,33 +6,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <script>
-            for (var i = 0; i < 20; i++){
-                var tempDiv = document.createElement("adiv");
-                let p = document.createElement('p');
 
-                let textnode = document.createTextNode('Text');
+
+        <script>
+            var people = [
+                {first: "Jason", last: "Vorhees", credit: "Friday the 13th"},
+                {first: "Freddy", last: "Krueger", credit: "A Nightmare on Elm Street"},
+                {first: "Roger", last: "Rabbit", credit: "Who Framed Roger Rabbit"},
+                {first: "Kevin", last: "McCallister", credit: "Home Alone"},
+                {first: "Godzilla", last: "King of The Monsters", credit: "Godzilla"},
+                {first: "Buzz", last: "Lightyear", credit: "Toy Story"},
+                {first: "Marion", last: "Cobretti", credit: "Cobra"}
+            ]
+
+            for (var i = 0; i < 20; i++) {
+                var tempDiv = document.createElement("adiv");
+                let p = document.createElement('people');
+
+                let textnode = document.createTextNode(people);
 
                 p.appendChild(textnode);
                 tempDiv.appendChild(p);
                 document.body.appendChild(tempDiv);
-                
+
                 tempDiv.classList.add('border');
                 tempDiv.setAttribute("id", String(i));
             }
-            
-            
-	//Use this Array of objects to complete the assignment.
-	var people =[
-		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
-		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
-		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
-		{first:"Kevin", last:"McCallister", credit:"Home Alone" },
-		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
-		{first:"Buzz", last:"Lightyear", credit:"Toy Story" },
-		{first:"Marion", last:"Cobretti", credit:"Cobra" }
-	]
-	
+
 
         </script>
     </body>
