@@ -33,7 +33,7 @@ function addText() {
     if ( textField.value.length ) {
         
         label.classList.remove('error');
-        var result = '<p>' + textField.value + '</p>';
+        var result = `<p> ${textField.value} </p>`;
         divToAdd.innerHTML += result;
         
      } else {

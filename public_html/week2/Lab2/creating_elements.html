@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-
-
         <script>
+
+            //Use this Array of objects to complete the assignment.
             var people = [
                 {first: "Jason", last: "Vorhees", credit: "Friday the 13th"},
                 {first: "Freddy", last: "Krueger", credit: "A Nightmare on Elm Street"},
@@ -19,11 +19,11 @@
                 {first: "Marion", last: "Cobretti", credit: "Cobra"}
             ]
 
-            for (var i = 0; i < 20; i++) {
+            for (var i = 0; i < 7; i++) {
                 var tempDiv = document.createElement("adiv");
-                let p = document.createElement('people');
+                let p = document.createElement('p');
 
-                let textnode = document.createTextNode(people);
+                let textnode = document.createTextNode(people[i].first + " " + people[i].last + " " + people[i].credit);
 
                 p.appendChild(textnode);
                 tempDiv.appendChild(p);
