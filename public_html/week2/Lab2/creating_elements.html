@@ -2,6 +2,9 @@
 <html>
     <head>
         <title>Lab2 | Creating Elements</title>
+        <style type="text/css">
+            .border{border:1px solid black;}
+        </style>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -19,19 +22,20 @@
                 {first: "Marion", last: "Cobretti", credit: "Cobra"}
             ]
 
-            for (var i = 0; i < 7; i++) {
+            for (var i = 0; i < people.length; i++) {
                 //duplicate 2 more times
                 var tempDiv = document.createElement("adiv");
                 let p = document.createElement('p');
 
-                let textnode = document.createTextNode(people[i].first + " " + people[i].last + " " + people[i].credit);
-
+                let textnode = document.createTextNode(people[i].first);
+                
                 p.appendChild(textnode);
                 tempDiv.appendChild(p);
-                document.body.appendChild(tempDiv);
+                
+                document.body.appendChild('tempDiv');
 
                 tempDiv.classList.add('border');
-                tempDiv.setAttribute("id", String(i));
+                tempDiv.setAttribute("border", String(i));
             }
 
 

@@ -2,6 +2,9 @@
 <html>
     <head>
         <title>Lab2 | Writing HTML to Page</title>
+        <style type="text/css">
+            .border{border:1px solid black;}
+        </style>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -23,10 +26,16 @@
             let body = document.querySelector('body')
             let str="";
 
-            for (var i = 0; i < 7; i++){
+            for (var i = 0; i < people.length; i++){
                 str += "<div id='" + i + "' class='border'>";
                 str += "<p>";
-                str += people[i].first + " " + people[i].last + " " + people[i].credit;
+                str += people[i].first;
+                str += "</p>";
+                str += "<p>";
+                str += people[i].last;
+                str += "</p>";
+                str += "<p>";
+                str += people[i].credit;
                 str += "</p>";
                 str +="</div>";
             }
