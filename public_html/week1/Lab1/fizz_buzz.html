@@ -12,16 +12,22 @@
     <script type="text/javascript">
         var num = []
         for(i = 1; i <= 100; i++){
-            num[i] = i
-            if(num[i] % 2){
-                console.log('fizz')
-            }
-            else if(num[i] % 3){
-                console.log('buzz')
-            }
-            else if(num[i] % 2 && num[i] % 3){
+		num[i] = i
+		
+		if((num[i] % 2 == 0) && (num[i] % 3 == 0)){
                 console.log('fizz buzz')
             }
+			else if((num[i] % 2 != 0) && (num[i] % 3 != 0)){
+			console.log(num[i])
+			}
+			
+			if(num[i] % 2 == 0){
+			console.log('fizz')
+			}
+            else if(num[i] % 3 == 0){
+                console.log('buzz')
+            }
+            
         }     
     </script>
 </body>

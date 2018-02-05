@@ -4,19 +4,12 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            .error{
-                color:red;
-            }
-        </style>
     </head>
     <body>
 
-        <label>Add text</label> <input name="fullname" type="text" />
+        <label>Add text</label> <input name="fullname" type="text" id="input_user"/>
 
-        <span>
-           <!-- span for adding text -->
-           <!-- add for text, rest for paragraph -->
+        <span id="user_text">
         </span>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -30,12 +23,39 @@
             Praesent iaculis iaculis sollicitudin. Pellentesque at scelerisque ex
 
         </p>
-        <input type="button" name="add" value="Add Text" />
-        <input type="button" name="color" value="Change Color" />
-        <input type="button" name="decoration" value="Change decoration" />
-        <input type="button" name="upper" value="Change text to uppercase" />
+        <button id="add">Add Text</button>
+        <button id="color">Change Color</button>
+        <button id="dec">Change Decoration</button>
+        <button id="upper">Change Text to Upper Case</button>
 
         <script>
+            document.querySelector('#add').addEventListener('click', addMe);
+            document.querySelector('#color').addEventListener('click', colorMe);
+            document.querySelector('#dec').addEventListener('click', decorateMe);
+            document.querySelector('#upper').addEventListener('click', uppercaseMe);
+
+            function addMe() {
+                var textbox = document.getElementById("input_user");
+                document.getElementById("user_text").innerHTML = span;
+                if (textbox.value.length <= 5) {
+                    textbox.style.backgroundColor = 'red';
+                    document.getElementById("user_text").innerHTML = "Error, Text needs a minimum of 5 characters";
+                }
+                if (textbox.value.length >= 5) {
+                    var span = document.getElementById("input_user").value;
+                    document.getElementById("user_text").innerHTML = span;
+                    textbox.style.backgroundColor = 'white';
+                }
+            }
+            function colorMe() {
+                user_text.style.color = 'red';
+            }
+            function decorateMe() {
+                user_text.style.textDecoration = 'underline';
+            }
+            function uppercaseMe() {
+                user_text.style.textTransform = 'uppercase';
+            }
 
         </script>
     </body>
