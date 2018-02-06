@@ -9,41 +9,66 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .red{
+                background-color:red;
+            }
+            .blue{
+                background-color:blue;
+            }
+            
+        </style>
+        
     </head>
     <body>
         <input type="text" name="amount" id="input_user">
         <button>Generate Grid</button>
 
         <div></div>
+        Average of Grid:<span id="span"> 0</span>
 
         <script>
 
-            var textbox = document.getElementById("input_user");
-
+            let textbox = document.querySelector('#input_user');
+            let averages = document.querySelector('#span');
             document.querySelector('button').addEventListener('click', gridMe);
 
-            // Add a paramter called 'e' or 'event'
             function gridMe() {
-                var items = [];
-                var str = '';
 
-                str += '<table border="1">';
+                var grid = [];
+                var str = '';
+                var num = 0;
+                var average = 0;
+
+                str += '<table border="2">';
                 for (let row = 0; row < textbox.value; row++) {
-                    items[row] = [];
+                    grid[row] = [];
                     str += '<tr>'
                     for (let col = 0; col < textbox.value; col++) {
-                        items[row][col] = randomNumber();
+                        grid[row][col] = randomNumber();
+                        num = num + randomNumber();
 
-                        str += `<td id="table">${items[row][col]}</td>`;
+
+                        if (grid[row][col] % 2 == 0) {
+                            str += `<td class="blue">${grid[row][col]}</td>`;
+                        } else if (grid[row][col] % 3 == 0) {
+                            str += `<td class="red">${grid[row][col]}</td>`;
+                        } else {
+                            str += `<td>${grid[row][col]}</td>`;
+                        }
+                        
                     }
                     str += '</tr>'
                 }
                 str += '</table>';
+                average = num / (textbox.value * textbox.value);
+                averages.innerHTML = average;
+                
 
                 document.querySelector('div').innerHTML = str;
-                if (items[row][col] % 3 == 0) {
-                    console.log("yes");
-                }
+
+
+
             }
 
             function randomNumber(min, max) {

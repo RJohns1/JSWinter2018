@@ -33,28 +33,29 @@
             document.querySelector('#color').addEventListener('click', colorMe);
             document.querySelector('#dec').addEventListener('click', decorateMe);
             document.querySelector('#upper').addEventListener('click', uppercaseMe);
-
+            let spantext = document.querySelector('#user_text');
+            let textbox = document.querySelector('#input_user');
+            let p = document.querySelector('p');
+            
             function addMe() {
-                var textbox = document.getElementById("input_user");
-                document.getElementById("user_text").innerHTML = span;
+                
+                spantext.innerHTML = '';
                 if (textbox.value.length <= 5) {
                     textbox.style.backgroundColor = 'red';
-                    document.getElementById("user_text").innerHTML = "Error, Text needs a minimum of 5 characters";
+                    spantext.innerHTML = "Error, Text needs a minimum of 5 characters";
                 }
                 if (textbox.value.length >= 5) {
-                    var span = document.getElementById("input_user").value;
-                    document.getElementById("user_text").innerHTML = span;
                     textbox.style.backgroundColor = 'white';
                 }
             }
             function colorMe() {
-                user_text.style.color = 'red';
+                p.style.color = 'red';
             }
             function decorateMe() {
-                user_text.style.textDecoration = 'underline';
+                p.style.textDecoration = 'underline';
             }
             function uppercaseMe() {
-                user_text.style.textTransform = 'uppercase';
+                p.style.textTransform = 'uppercase';
             }
 
         </script>
