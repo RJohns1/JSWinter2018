@@ -4,6 +4,32 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body{
+                background-color:gainsboro;
+            }
+            p{
+                color: darkblue;
+            }
+            
+            #input_user{
+                background-color: blanchedalmond;
+            }
+            #add{
+               background-color: green;
+            }
+            #color{
+                background-color: red;
+            }
+            #dec{
+                background-color: blue;
+            }
+            #upper{
+                background-color: orange;
+            }
+
+        </style>
     </head>
     <body>
 
@@ -36,16 +62,16 @@
             let spantext = document.querySelector('#user_text');
             let textbox = document.querySelector('#input_user');
             let p = document.querySelector('p');
-            
+
             function addMe() {
-                
+
                 spantext.innerHTML = '';
                 if (textbox.value.length <= 5) {
                     textbox.style.backgroundColor = 'red';
                     spantext.innerHTML = "Error, Text needs a minimum of 5 characters";
                 }
                 if (textbox.value.length >= 5) {
-                    textbox.style.backgroundColor = 'white';
+                    textbox.style.backgroundColor = 'blanchedalmond';
                 }
             }
             function colorMe() {

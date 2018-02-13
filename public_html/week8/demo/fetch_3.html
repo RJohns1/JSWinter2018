@@ -26,6 +26,7 @@
             .catch(responseError);
     
             function handleResponse(response) {
+                console.log(response)
                 let contentType = response.headers.get("content-type");
                
                 if(contentType && contentType.includes("json")) {

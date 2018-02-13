@@ -23,7 +23,7 @@
             ]
 
             for (var i = 0; i < people.length; i++) {
-                var tempDiv = document.createElement("adiv");
+                var tempDiv = document.createElement("div");
                 let p = document.createElement('p');
 
                 let textnode = document.createTextNode(people[i].first);
@@ -31,10 +31,26 @@
                 p.appendChild(textnode);
                 tempDiv.appendChild(p);
                 
-                document.body.appendChild('tempDiv');
+                let p2 = document.createElement('p');
 
+                let textnode2 = document.createTextNode(people[i].last);
+                
+                p2.appendChild(textnode2);
+                tempDiv.appendChild(p2);
+                
+                let p3 = document.createElement('p');
+
+                let textnode3 = document.createTextNode(people[i].credit);
+                
+                p3.appendChild(textnode3);
+                tempDiv.appendChild(p3);
+                
                 tempDiv.classList.add('border');
                 tempDiv.setAttribute("border", String(i));
+                
+                document.body.appendChild(tempDiv);
+
+               
             }
 
 
