@@ -43,16 +43,7 @@
                 }
                 content.innerHTML = html
                 
-                let divs = document.querySelectorAll('div.comp')
-                
-                for( let index=0; index < divs.length; index++ ) {
-                    divs[index].addEventListener('click', function(){
-                        console.log( this.dataset, this.dataset.index, this.getAttribute('data-index'));
-                        let currentDivIndex = this.dataset.index
-                        let registeredDate = new Date(data[currentDivIndex].registered).toLocaleDateString("en-US", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' })
-                        document.querySelector('p').innerHTML = `${data[currentDivIndex].about} <p>${registeredDate}</p>`
-                    })
-                }
+               
             }
             
             function responseError(error) {
