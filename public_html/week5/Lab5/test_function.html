@@ -11,6 +11,29 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <input name="test" type="text" id="input_user"/><button id="test">Test</button>
+
+
+        <script>
+
+            document.querySelector('#test').addEventListener('click', testMe);
+
+            let textbox = document.querySelector('#input_user');
+
+            function testMe() {
+                var str = input_user.value;
+                var result = /^[0-9]*$/.test(str);
+
+                if (textbox.value === "") {
+                    textbox.style.borderColor = 'initial';
+                } else if (result === false) {
+                    textbox.style.borderColor = 'red';
+                } else if (result === true) {
+                    textbox.style.borderColor = 'green';
+                }
+
+
+            }
+        </script>
     </body>
 </html>

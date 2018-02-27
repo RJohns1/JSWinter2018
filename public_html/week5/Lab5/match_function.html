@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        
+        <input name="test" type="text" id="input_user" value="12345 fake st. Providence, RI 02907" size="100"/><button id="test">Test</button>
+        <p></p>
+
+        <script>
+
+            document.querySelector('#test').addEventListener('click', testMe);
+
+            let textbox = document.querySelector('#input_user');
+            let p = document.querySelector('p');
+            function testMe() {
+
+                var str = textbox.value;
+                
+                
+                var machesFound = /[0-9]{5}\b$/;
+                var matchresult = str.match(machesFound);
+                if(matchresult !== null){
+                    p.innerHTML = "Zipcode: " + matchresult;
+                }
+                else{
+                    p.innerHTML = "ERROR: Zipcode not found";
+                }
+                
+
+            }
+
+
+
+
+        </script>
+    </body>
+</html>
